@@ -4,8 +4,8 @@ import React, {
   useContext,
   useEffect,
   useRef,
+  useState,
 } from 'react';
-
 
 type Context_Type = {
   isLoggedIn: unknown;
@@ -13,23 +13,28 @@ type Context_Type = {
   userData?: any;
   setUserData: (userData: any) => void;
   socketRef?: any;
+  isDarkMode: boolean;
+  setIsDarkMode: (isDarkMode: boolean) => void;
 };
 
 const AppContext = createContext<Context_Type>({
   isLoggedIn: null,
-  setIsLoggedIn: () => { },
+  setIsLoggedIn: () => {},
   userData: null,
-  setUserData: () => { },
+  setUserData: () => {},
   socketRef: null,
+  isDarkMode: false,
+  setIsDarkMode: () => {},
 });
 
 type AppContextProviderProps = {
   children?: ReactNode;
 };
 
-export default ({ children }: AppContextProviderProps) => {
+export default ({children}: AppContextProviderProps) => {
   const [isLoggedIn, setIsLoggedIn] = React.useState<unknown>(null);
   const [userData, setUserData] = React.useState<any>(null);
+  const [isDarkMode, setIsDarkMode] = useState<boolean>(false);
   //socket connection
   const socketRef = useRef<any>();
 
@@ -41,6 +46,8 @@ export default ({ children }: AppContextProviderProps) => {
         userData,
         setUserData,
         socketRef,
+        setIsDarkMode,
+        isDarkMode,
       }}>
       {children}
     </AppContext.Provider>

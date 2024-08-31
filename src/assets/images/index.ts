@@ -1,5 +1,8 @@
 export default {
-  LOGO: require('./logo.png'),
+  LOGO: require('./logo3.png'),
+  LOGO1: require('./logo.png'),
+  SECOND_LOGO: require('./nayak2-removebg-preview.png'),
+  THIRD_LOGO: require('./nayak2.png'),
   USER: require('./user.png'),
   FEMALE: require('./casual-female.png'),
   MALE: require('./male-face-character.png'),
@@ -8,4 +11,6 @@ export default {
   BIKE: require('./motorcycle.png'),
   SCOOTER: require('./bike-delivery.png'),
   REGISTER_SUCCESS: require('./group.png'),
+  WELCOME: require('./welcome1.png'),
+  WELCOME2: require('./welcome2.png'),
 };

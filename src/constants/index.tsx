@@ -1,4 +1,4 @@
-import { COLORS } from '~/Styles';
+import {COLORS} from '../styles';
 
 export const colorsArray = [
   '#800080',

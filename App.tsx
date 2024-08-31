@@ -3,10 +3,11 @@ import {GluestackUIProvider, StatusBar} from '@gluestack-ui/themed';
 import {config} from '@gluestack-ui/config';
 import {NavigationContainer} from '@react-navigation/native';
 import Routes from './src/Routes';
-import {AppContextProvider} from './src/contexts';
+import {AppContextProvider, useAppContext} from './src/contexts';
 import {COLORS} from './src/styles';
 
 const App = () => {
+  const {isDarkMode} = useAppContext();
   return (
     <GluestackUIProvider
       config={{
@@ -16,8 +17,8 @@ const App = () => {
         },
       }}>
       <StatusBar
-        backgroundColor={COLORS?.textWhite}
-        barStyle={'dark-content'}
+        backgroundColor={isDarkMode ? '#000' : COLORS?.primaryC1}
+        barStyle={'light-content'}
       />
       <NavigationContainer>
         <AppContextProvider>

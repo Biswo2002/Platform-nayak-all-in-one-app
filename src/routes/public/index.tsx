@@ -16,6 +16,7 @@ export default function PublicRoutes({
     <Stack.Navigator
       initialRouteName={initialRouteName}
       screenOptions={{headerShown: false}}>
+      <Stack.Screen name="WelcomeScreen" component={Auth.WelcomeScreen} />
       <Stack.Screen name="Login" component={Auth.Login} />
       <Stack.Screen
         name="OTPVerificationScreen"
@@ -29,6 +30,7 @@ export default function PublicRoutes({
         name="RegisterSuccessScreen"
         component={Auth.RegisterSuccessScreen}
       />
+      <Stack.Screen name="OnboardingScreen" component={Auth.OnboardingScreen} />
     </Stack.Navigator>
   );
 }

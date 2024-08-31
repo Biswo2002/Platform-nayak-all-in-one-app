@@ -4,12 +4,14 @@ import {config as defaultConfig} from '@gluestack-ui/config';
 const fontFamily = 'Roboto';
 
 export const COLORS = {
-  primaryC1: '#313D65',
-  secondaryC2: '#627BCB',
+  // primaryC1: '#ff0000',
+  primaryC1: '#4c1c1c',
+  // secondaryC2: '#c30010',
+  secondaryC2: '#c30010',
   PRIMARY: '#3730a3',
   balck: '#000',
   textWhite: '#FFFFFF',
-  textSecondary: '#756bb3',
+  textSecondary: '#CC0000',
   fadePrime: '#7166ba',
   gradientLow: '#F5F1EC',
   NewPrimary: '#290A5F',
